@@ -7,6 +7,11 @@ class TweetsController < ApplicationController
   def new
   end
   
+  def create
+    Tweet.create(tweet_params)
+  end
+  
+    
   def show
   end
   
@@ -14,6 +19,12 @@ class TweetsController < ApplicationController
   end
   
   def destroy
+  end
+  
+  
+  private
+  def tweet_params
+    params.permit(:title, :text)
   end
 
 end
