@@ -17,7 +17,7 @@
   <body>
     <nav class="cyan accent-4">
       <div class="nav-wrapper">
-        <a href="#" class="brand-logo">Blog</a>
+        <a href="/" class="brand-logo">Blog</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <% if user_signed_in? %>
             <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
@@ -29,7 +29,8 @@
         </ul>
       </div>
     </nav>
-    
+    <div class="container">
     <%= yield %>
+    </div>
   </body>
 </html>
